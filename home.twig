@@ -1,0 +1,34 @@
+
+{% extends "layout.twig" %}
+
+{% block content %}
+
+    {{widget('menusections', 'menusections1', {})|raw}}
+
+<header>
+    <div class="wrapper clearfix">
+
+        <div class="companyheader clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "Pizza Vicenza"})|raw}}
+             {{widget('content', 'headercontent', {"content":"<p>Come in for a coffee then sit and relax on one of our benches outside. We are at 189 Example Street, Austin, XMPL</p>"})|raw}}
+            {{widget('clicktocall', 'headerclicktocall', {phoneText: '212 6574 6736'})|raw}}
+        </div>
+       
+    </div><!--end wrapper clearfix-->
+</header>
+
+{{widget('menu', 'menu1', {})|raw}}
+
+
+
+<footer>
+    <div class="wrapper clearfix">
+        {{widget('content', 'footercolumn1content', {"content":"<p>Lorem Ipsum Dolor</p>"})|raw}}
+        {{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+    </div>
+
+    
+</footer>
+
+{% endblock %}
