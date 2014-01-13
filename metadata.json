@@ -1,7 +1,7 @@
 {
-    "name":"Mau Cafe",
-    "thumbnail":"sycamore.png",
-    "screenshot":"sycamore.png",
+    "name":"Fusion",
+    "thumbnail":"fusion.png",
+    "screenshot":"fusion.png",
     "tags": {
     "en": ["minimal", "clean", "photography", "vintage", "modern", "dark", "studio", "website", "creative", "elegant", "professional", "unique", "media", "sans-serif"],
     "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
@@ -10,12 +10,12 @@
     "colorSwatches":
     {
         "Swatch 1": {
-            "color1":"#f7f4e1",
+            "color1":"#ffffff",
             "color2":"#f7f4e1",
-            "color3":"#841c2f",
-            "color4":"#3c4a55",
-            "color5":"#3c4a55",
-            "color6":"#9bd6cf",
+            "color3":"#000000",
+            "color4":"#000000",
+            "color5":"#000000",
+            "color6":"#a20404",
             "color7":"#ffffff"
         },
         "Swatch 2": {
@@ -56,17 +56,17 @@
         }
     },
     "fontSwatch": {
-       "title": "\"Futura\", \"Helvetica\", sans-serif",
+       "title": "\"Josefin Sans\", \"Helvetica\", sans-serif",
         "font1": {
-            "font-family": "\"Futura\", \"Helvetica\", sans-serif",
-            "font-size": "24px",
+            "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
+            "font-size": "60px",
             "font-weight": "400",
             "line-height": "34px",
-            "color": "@color-swatch6",
-            "letter-spacing": "inherit"
+            "color": "@color-swatch4",
+            "letter-spacing": "3px"
         },
         "font2": {
-            "font-family": "\"Futura\", \"Helvetica\", sans-serif",
+            "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
             "font-size": "24px",
             "font-weight": "400",
             "line-height": "34px",
@@ -74,15 +74,15 @@
             "letter-spacing": "inherit"
         },
         "font3": {
-            "font-family": "\"Futura\", \"Helvetica\", sans-serif",
-            "font-size": "18px",
+            "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
+            "font-size": "24px",
             "font-weight": "400",
             "line-height": "28px",
             "color": "@color-swatch3",
             "letter-spacing": "inherit"
         },
         "font4": {
-            "font-family": "\"Futura\", \"Helvetica\", sans-serif",
+            "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
             "font-size": "14px",
             "font-weight": "400",
             "line-height": "24px",
@@ -90,7 +90,7 @@
             "letter-spacing": "inherit"
         },
         "font5": {
-            "font-family": "\"Futura\", \"Helvetica\", sans-serif",
+            "font-family": "\"Arial\", \"Helvetica\", sans-serif",
             "font-size": "14px",
             "font-weight": "400",
             "line-height": "24px",
@@ -98,18 +98,18 @@
             "letter-spacing": "inherit"
         },
         "font6": {
-            "font-family": "\"Futura\", \"Helvetica\", sans-serif",
-            "font-size": "16px",
+            "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
+            "font-size": "24px",
             "font-weight": "400",
             "line-height": "26px",
             "color": "@color-swatch5",
-            "color-hover": "@color-swatch5",
-            "letter-spacing": "inherit",
+            "color-hover": "@color-swatch6",
+            "letter-spacing": "3px",
             "background-color": "transparent",
             "background-color-hover": "transparent"
         },
         "font7": {
-            "font-family": "\"Futura\", \"Helvetica\", sans-serif",
+            "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
             "font-size": "18px",
             "font-weight": "400",
             "line-height": "28px",
@@ -119,27 +119,27 @@
             "background-color-hover": "darken(@color-swatch1,5%)"
         },
         "font8": {
-            "font-family": "\"Futura\", \"Helvetica\", sans-serif",
-            "font-size": "18px",
-            "font-weight": "400",
+            "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
+            "font-size": "22px",
+            "font-weight": "300",
             "line-height": "28px",
-            "color": "@color-swatch5",
-            "letter-spacing": "inherit"
+            "color": "@color-swatch4",
+            "letter-spacing": "3px"
         },
         "font9": {
-            "font-family": "\"Futura\", \"Helvetica\", sans-serif",
-            "font-size": "18px",
+            "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
+            "font-size": "12px",
             "font-weight": "400",
             "line-height": "28px",
-            "color": "@color-swatch5",
-            "letter-spacing": "inherit"
+            "color": "@color-swatch1",
+            "letter-spacing": "2px"
         },
         "font10": {
-            "font-family": "\"Futura\", \"Helvetica\", sans-serif",
-            "font-size": "24px",
-            "font-weight": "400",
+            "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
+            "font-size": "100px",
+            "font-weight": "700",
             "line-height": "34px",
-            "color": "@color-swatch5",
+            "color": "@color-swatch4",
             "letter-spacing": "inherit"
         }
     }
