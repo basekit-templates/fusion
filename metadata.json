@@ -22,7 +22,7 @@
             "color1":"#f7f4e1",
             "color2":"#f7f4e1",
             "color3":"#841c2f",
-            "color4":"#3c4a55",
+            "color4":"#841c2f",
             "color5":"#3c4a55",
             "color6":"#E77E7E",
             "color7":"#ffffff"
@@ -30,17 +30,17 @@
         "Swatch 3": {
             "color1":"#f7f4e1",
             "color2":"#f7f4e1",
-            "color3":"#E77E7E",
-            "color4":"#3c4a55",
+            "color3":"#4F7391",
+            "color4":"#4F7391",
             "color5":"#3c4a55",
             "color6":"#9bd6cf",
             "color7":"#ffffff"
         },
         "Swatch 4": {
-            "color1":"#f7f4e1",
+            "color1":"#ffffff",
             "color2":"#f7f4e1",
-            "color3":"#841c2f",
-            "color4":"#3c4a55",
+            "color3":"#afafaf",
+            "color4":"#a20404",
             "color5":"#3c4a55",
             "color6":"#9bd6cf",
             "color7":"#ffffff"
@@ -48,8 +48,8 @@
         "Swatch 5": {
             "color1":"#f7f4e1",
             "color2":"#f7f4e1",
-            "color3":"#841c2f",
-            "color4":"#3c4a55",
+            "color3":"#4BA5A1",
+            "color4":"#4BA5A1",
             "color5":"#3c4a55",
             "color6":"#9bd6cf",
             "color7":"#ffffff"
@@ -61,17 +61,17 @@
             "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
             "font-size": "60px",
             "font-weight": "400",
-            "line-height": "34px",
+            "line-height": "60px",
             "color": "@color-swatch4",
-            "letter-spacing": "3px"
+            "letter-spacing": "6px"
         },
         "font2": {
             "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
-            "font-size": "24px",
+            "font-size": "48px",
             "font-weight": "400",
-            "line-height": "34px",
-            "color": "@color-swatch3",
-            "letter-spacing": "inherit"
+            "line-height": "48px",
+            "color": "@color-swatch4",
+            "letter-spacing": "6px"
         },
         "font3": {
             "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
@@ -79,20 +79,20 @@
             "font-weight": "400",
             "line-height": "28px",
             "color": "@color-swatch3",
-            "letter-spacing": "inherit"
+            "letter-spacing": "2px"
         },
         "font4": {
             "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
-            "font-size": "14px",
-            "font-weight": "400",
+            "font-size": "18px",
+            "font-weight": "00",
             "line-height": "24px",
             "color": "@color-swatch3",
             "letter-spacing": "inherit"
         },
         "font5": {
             "font-family": "\"Arial\", \"Helvetica\", sans-serif",
-            "font-size": "14px",
-            "font-weight": "400",
+            "font-size": "12px",
+            "font-weight": "300",
             "line-height": "24px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
@@ -112,9 +112,9 @@
             "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
             "font-size": "18px",
             "font-weight": "400",
-            "line-height": "28px",
+            "line-height": "18px",
             "color": "@color-swatch5",
-            "letter-spacing": "inherit",
+            "letter-spacing": "2px",
             "background-color": "transparent",
             "background-color-hover": "darken(@color-swatch1,5%)"
         },
@@ -128,17 +128,17 @@
         },
         "font9": {
             "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
-            "font-size": "12px",
+            "font-size": "18px",
             "font-weight": "400",
             "line-height": "28px",
-            "color": "@color-swatch1",
+            "color": "@color-swatch6",
             "letter-spacing": "2px"
         },
         "font10": {
             "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
             "font-size": "100px",
             "font-weight": "700",
-            "line-height": "34px",
+            "line-height": "100px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         }

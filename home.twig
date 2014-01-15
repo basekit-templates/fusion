@@ -12,21 +12,21 @@
         <div class="companyheader clearfix">
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
             {{widget('companyname', 'companyname', {"business": "FUSION"})|raw}}
-             {{widget('content', 'headercontent', {"content":"<p>CHINESE CUISINE</p>"})|raw}}
+            {{widget('content', 'headercontent', {"content":"<p>CHINESE CUISINE</p>"})|raw}}
         </div>
 
-                    {{widget('menusections', 'menusections1', {})|raw}}
+            {{widget('menusections', 'menusections1', {})|raw}}
        
     </div><!--end wrapper clearfix-->
 </header>
+    <div class="container wrapper clearfix">
+        <div class="wrapper clearfix">
 
-<div class="wrapper clearfix">
+        {{widget('menu', 'menu1', {})|raw}}
+        {{widget('contactform', 'thisunqiuewidgetname', {'text': 'Submit','formTitle': 'Contact Form', 'email': 'profile'})|raw}}
 
-{{widget('menu', 'menu1', {})|raw}}
-
-                    {{widget('contactform', 'thisunqiuewidgetname', {'text': 'Submit','formTitle': 'Contact Form', 'email': 'profile'})|raw}}
-
-                    </div><!--end wrapper clearfix-->
+        </div><!--end wrapper clearfix-->
+    </div>
 
 <footer>
         {{widget('content', 'footercolumn1content', {"content":"<p>COPYRIGHT. 2014</p>"})|raw}}

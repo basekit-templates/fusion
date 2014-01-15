@@ -73,6 +73,7 @@ h2 {
     line-height:@font-swatch2-line-height;
     color: @font-swatch2-color;
     letter-spacing: @font-swatch2-letter-spacing;
+    margin:40px 0 0 0;
 }
 
 h3 {
@@ -188,7 +189,7 @@ ol, li, ul {
             @media @tablet {
                     width: 100%;
                     padding: 1em 0;
-                    border-bottom: 1px dotted @color-swatch6;
+                    border-bottom: 1px dotted @color-swatch3;
             }
             &:last-child {
                     @media @tablet {
@@ -262,8 +263,6 @@ header {
             line-height: @font-swatch10-line-height;
             letter-spacing: @font-swatch10-letter-spacing;
             font-size: @font-swatch10-font-size;
-            margin-top:40px;
-            margin-bottom:30px;
                 &:hover {
                     text-decoration: none;
                 }
@@ -310,9 +309,14 @@ header {
    6. MENU
    =============================== */
 
+.container{
+    border:1px solid black;
+    margin-top:40px;
+    padding-bottom:40px;
+}
+
 .widget.menu {
     margin:0 auto;
-    border:1px solid @color-swatch3;
     padding: 30px;
     margin-top: 50px;
     @media only screen and (max-width: 1084px) {
@@ -320,14 +324,13 @@ header {
     }
     @media @tablet {
         background-image: none;
-        border-top: 1px dashed @color-swatch6;
         padding: 30px 0 0;
         width:100%;
     }
 
     .main {
         background-color: lighten(@color-swatch1,3%);
-        width: 960px;
+        width: 90%;
         padding: 30px;
         margin: 0 auto;
             @media only screen and (max-width: 1084px) {
@@ -357,23 +360,46 @@ header {
                     @media @tablet {
                         padding: 1.25em 0 0.75em;
                     }
-                    h1 {    /* menu-name */
-                        text-align: center;
-                        overflow: hidden; 
-                        &:before, &:after {
-                            content: "\2605";
-                            display: inline-block;
-                            height: 27px;
-                            width: 28px;
-                            margin: 0 10px;
-                            position: relative;
-                            top: -2px;
+                    h1, h2 {    /* menu-name menu-section-name */
+                text-align: center;
+                overflow: hidden; 
+                    &:before, &:after {
+                        border-top: 2px solid @color-swatch3;
+                        content: "";
+                        display: inline-block;
+                        height: .1em;
+                        position: relative;
+                        vertical-align: middle;
+                        width: 50%;
+                        margin-bottom: .15em;
+                        @media only screen and (max-width: 480px) {
+                            content: none;
+                            display: block;
+                            height: auto;
+                            width: auto;
+                            margin-bottom: 0;
                         }
-                     }
-                    h2 { /* MENU-SECTION-HEADER */
-                        text-align: center;
-                        overflow: hidden; 
                     }
+                    &:before {
+                        right: 1em;
+                        margin-left: -50%;
+                        @media only screen and (max-width: 480px) {
+                            right: 0;
+                            margin-left: 0;
+                         }
+                    }
+                    &:after {
+                        left: 1em;
+                        margin-right: -50%;
+                        @media only screen and (max-width: 480px) {
+                            right: 0;
+                            margin-left: 0;
+                         }
+                    }
+                @media only screen and (max-width: 480px) {
+                     padding: 1em 0 0.5em;
+                }
+            }
                     p {    /* menu-description  menu-section-description  menu-availability */
                         text-align: center;       
                     }  
@@ -426,7 +452,7 @@ header {
 
                     .inner-item {
                         display: inline-block;
-                        border-bottom: 1px solid lighten(@color-swatch6, 15%);
+                        border-bottom: 1px solid @color-swatch3;
                         padding-bottom: 30px;
                         margin-bottom: 30px;
                         h3 {    /* menu-item-name */  
@@ -443,12 +469,12 @@ header {
                             margin-top: 5px;
                         }
                         .menu-item-price p {   /* standard-price */
-                            font-family:@font-swatch8-font-family;
-                            font-size:@font-swatch8-font-size;
-                            font-weight: @font-swatch8-font-weight;
-                            line-height:@font-swatch8-line-height;
-                            color: @font-swatch8-color;
-                            letter-spacing: @font-swatch8-letter-spacing;
+                            font-family:@font-swatch9-font-family;
+                            font-size:@font-swatch9-font-size;
+                            font-weight: @font-swatch9-font-weight;
+                            line-height:@font-swatch9-line-height;
+                            color: @font-swatch9-color;
+                            letter-spacing: @font-swatch9-letter-spacing;
                             padding: 0px;
                             margin: 0;
                             display: inline-block;
@@ -495,11 +521,11 @@ header {
                                 width: 20px;
                                 height: 20px;
                                 background-size: 20px;
-                                border: 2px solid @color-swatch6;
                                 margin: 5px 5px 0 0;
                                 background-repeat: no-repeat;
                                 background-position: center;
                                 display: inline-block;
+                                border-radius: 50%;
                             }
                             .vegetarian-icon {
                                 background-image: image('/images/veggie-icon.png');
@@ -543,7 +569,7 @@ header {
                     padding: 0 2em 0;
                 }
                 .menu-section-header {
-                    border-bottom: 1px solid lighten(@color-swatch6, 15%);
+                    border-bottom: 1px solid @color-swatch3;
                     margin-bottom: 20px;
                 }
             } /* end PROMOTED SUB-SECTION */
@@ -625,12 +651,12 @@ footer {
             width: 93%;
             }
                 p {
-                    font-family:@font-swatch9-font-family;
-                    font-size:@font-swatch9-font-size;
-                    font-weight: @font-swatch9-font-weight;
-                    line-height:@font-swatch9-line-height;
-                    color: @font-swatch9-color; 
-                    letter-spacing: @font-swatch9-letter-spacing;
+                    font-family:@font-swatch5-font-family;
+                    font-size:@font-swatch5-font-size;
+                    font-weight: @font-swatch5-font-weight;
+                    line-height:@font-swatch5-line-height;
+                    color: white; 
+                    letter-spacing: 2px;
                 }
             @media @tablet {
                 width:auto;
@@ -654,7 +680,7 @@ footer {
     font-size:1em;
     font-family:@font-swatch7-font-family;
     background-color:@color-swatch3;
-    padding:0.5em 0em;
+    padding:0.7em 0em 0.5em 0em;
     
     a {
         text-decoration: none;
@@ -762,12 +788,6 @@ footer {
    CONTACT FORM WIDGET
    =============================== */
 
-   .contactform{
-  border-top:1px solid @color-swatch4;
-  border-bottom:1px solid @color-swatch4;
-  padding:20px 0px;
-  top:-50px;
-}
 
 .widget.contactform form {
     display: block;
@@ -776,6 +796,7 @@ footer {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
+    text-align:center;
 }
 
 .widget.contactform fieldset {
@@ -792,27 +813,26 @@ footer {
     line-height:@font-swatch4-line-height;
     color:@color-swatch3;
     letter-spacing: @font-swatch4-letter-spacing;
+    display:none;
 }
 
 .widget.contactform fieldset input {
     height: 50px;
     width: 100%;
-    background-color: lighten(@color-swatch4,40%);
-    border:0;
+    border:1px solid @color-swatch3;
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
+    color: lighten(@font-swatch5-color,20%);
     text-indent: 12px;
-    margin-top: 6px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding: 0;
+    background-color:transparent;
 }
 
 .widget.contactform fieldset textarea {
-    height: 132px;
+    height: 200px;
     width: 100%;
-    background-color: lighten(@color-swatch4,40%);
-    border: 0;
+    border:1px solid @color-swatch3;
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
@@ -822,6 +842,7 @@ footer {
     margin-bottom: 20px;
     resize: none;
     padding: 0;
+    background-color:transparent;
 }
 
 .widget.contactform fieldset input:focus, .widget.contactform fieldset textarea:focus {
@@ -844,10 +865,10 @@ footer {
 }
 
 .widget.contactform fieldset button.btn {
-  padding: 17px 56px;
-  border: 2px solid @color-swatch4;
+  padding: 15px 30px;
+  border:1px solid @color-swatch3;
   font-family: @font-swatch7-font-family;
-  font-size: .9em;
+  font-size: @font-swatch7-font-size;
   font-weight:@font-swatch7-font-weight;
   color: @font-swatch7-color;
   text-decoration: none;
@@ -856,7 +877,7 @@ footer {
   
 .widget.contactform fieldset button.btn:hover {
   background-color: transparent;
-  color: darken(@font-swatch7-color,10%);
+  color: @font-swatch7-color;
   cursor: pointer;
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
@@ -892,7 +913,29 @@ footer {
     font-weight: bold;
 }
 
+/* ===============================
+   9. IPAD WIDTH
+   =============================== */
 
+@media only screen and (max-width: 768px) {
+
+  /* UL ALIGN RIGHT */
+
+    .widget.extendednavigation ul.align-right li.folder {
+        background-position: 12px center;
+        padding-right: 0;
+    }
+    .widget .extendednavigation a.pull:after {
+        right: 42%;
+    }
+    .widget.menusections a.pull {
+        top:20px;
+    }
+        .widget.menusections{
+        width:20%;
+        margin:0px auto;
+    }
+}
 
 /* ===============================
    9. IPHONE WIDTH
@@ -907,7 +950,40 @@ footer {
         padding-right: 0;
     }
     .widget .extendednavigation a.pull:after {
-        right: 48%;
+        right: 38%;
+    }
+
+        .widget.menusections a.pull {
+        top:20px;
+    }
+
+    header .companyheader .companyname a {
+          font-size: bkscale(@font-swatch1-font-size,0.9);
+          line-height:bkscale(@font-swatch1-line-height,0.9);
+          padding-bottom:0px;  
+    }
+
+    .bk-content-text p {
+        font-size: bkscale(@font-swatch5-font-size,0.9);
+          line-height:bkscale(@font-swatch5-line-height,0.9);
+    }
+
+    h1 {
+          font-size: bkscale(@font-swatch1-font-size,0.7);
+          line-height:bkscale(@font-swatch1-line-height,0.7);
+    }
+
+    h2 {
+          font-size: bkscale(@font-swatch2-font-size,0.7);
+          line-height:bkscale(@font-swatch2-line-height,0.7);
+    }
+    h3 {
+          font-size: bkscale(@font-swatch3-font-size,0.7);
+          line-height:bkscale(@font-swatch3-line-height,0.7);
+    }
+    .widget.menusections{
+        width:20%;
+        margin:0px auto;
     }
 }
 
