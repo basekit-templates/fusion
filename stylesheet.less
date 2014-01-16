@@ -1,3 +1,9 @@
+/* ===============================
+   IMPORT CSS
+   =============================== */
+
+@import "@{templateCommon}/basekit-bootstrap.less";
+
 /* 
 
 Table of Contents -
@@ -116,13 +122,48 @@ ol, li, ul {
    =============================== */
 
 @tablet: ~"only screen and (max-width: 768px)";
-@mobile: ~"only screen and (max-width: 320px)";
+@mobile: ~"only screen and (max-width: 480px)";
 @media only screen and (max-width: 1084px);
 
 /* ===============================
    3. CUSTOM CSS
    =============================== */
 
+.contacttextwidget {
+    text-align:center;
+}
+
+.bk-content-text h2 {
+    background-color:@color-swatch1;
+    text-align:center;
+    overflow:hidden;
+}
+
+.bk-content-text h2:after {
+                        border-top: 2px solid @color-swatch3;
+                        content: "";
+                        display: inline-block;
+                        height: .1em;
+                        position: relative;
+                        vertical-align: middle;
+                        width: 30%;
+                        margin-bottom: .15em;
+                        left:1em;
+                        margin-right:-50px;
+}
+
+.bk-content-text h2:before {
+                        border-top: 2px solid @color-swatch3;
+                        content: "";
+                        display: inline-block;
+                        height: .1em;
+                        position: relative;
+                        vertical-align: middle;
+                        width: 30%;
+                        margin-bottom: .15em;
+                        right:1em;
+                        margin-left:-50px;
+}
 
 /* ===============================
    4. MENU SECTIONS NAVIGATION
@@ -219,7 +260,7 @@ ol, li, ul {
         }
     }
     a {
-            &.pull {
+            &.menu-pull {
                 display: none;
                 @media @tablet {
                     display: block;
@@ -248,11 +289,16 @@ ol, li, ul {
 
 header {
 
+    padding:0;
+
  .companyheader {
         margin: 160px 0px;
+        width:100%;
+        float:none;
 
         .logo, .companyname {
             text-align: center;
+            float:none;
         }
 
         .companyname a {
@@ -317,21 +363,19 @@ header {
 
 .widget.menu {
     margin:0 auto;
-    padding: 30px;
     margin-top: 50px;
     @media only screen and (max-width: 1084px) {
          width: 90%;
     }
     @media @tablet {
         background-image: none;
-        padding: 30px 0 0;
         width:100%;
     }
 
     .main {
         background-color: lighten(@color-swatch1,3%);
         width: 90%;
-        padding: 30px;
+        padding-top:30px;
         margin: 0 auto;
             @media only screen and (max-width: 1084px) {
                 width: 93%;
@@ -355,12 +399,12 @@ header {
 
             /* MENU-HEADER AND SUB-SECTION HEADER */
 
-            .menu-header, .menu-section-header {
+            .menu-header, .menu-subsection-header {
                 padding: 0 0 1.2em;
                     @media @tablet {
                         padding: 1.25em 0 0.75em;
                     }
-                    h1, h2 {    /* menu-name menu-section-name */
+                    h1, h2, {    /* menu-name menu-section-name */
                 text-align: center;
                 overflow: hidden; 
                     &:before, &:after {
@@ -552,7 +596,7 @@ header {
 
             }   /* end ol .menu-items */  
 
-            .menu-section.menu-item-promoted { /* PROMOTED SUB-SECTION: ol.menu-subsection > li.menu-section.menu-item-promoted */  
+            .menu-subsection .menu-subsection-promoted { /* PROMOTED SUB-SECTION */  
                 border: 6px solid @color-swatch3;
                 padding: 2em 2em 0;
                 margin-bottom: 2em;
@@ -568,7 +612,7 @@ header {
                 @media @mobile {
                     padding: 0 2em 0;
                 }
-                .menu-section-header {
+                .menu-subsection-header {
                     border-bottom: 1px solid @color-swatch3;
                     margin-bottom: 20px;
                 }
@@ -628,6 +672,10 @@ header {
 
 } /* end .widget.menu */
 
+.main{
+    padding:0;
+}
+
 /* ===============================
    7. FOOTER
   =============================== */
@@ -670,7 +718,6 @@ footer {
         }
 }   /* end footer */ 
 
-
 /* ===============================
    8. SOCIAL BAR WIDGET / PROFILE DATA
    =============================== */
@@ -681,6 +728,7 @@ footer {
     font-family:@font-swatch7-font-family;
     background-color:@color-swatch3;
     padding:0.7em 0em 0.5em 0em;
+    margin:0;
     
     a {
         text-decoration: none;
@@ -791,7 +839,7 @@ footer {
 
 .widget.contactform form {
     display: block;
-    padding: 30px;
+    padding-top: 30px;
     background-color: @color-swatch1;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -816,21 +864,19 @@ footer {
     display:none;
 }
 
-.widget.contactform fieldset input {
-    height: 50px;
+.widget.contactform form fieldset input {
     width: 100%;
+    padding:5px 0px;
     border:1px solid @color-swatch3;
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
     color: lighten(@font-swatch5-color,20%);
     text-indent: 12px;
     margin-bottom: 20px;
-    padding: 0;
     background-color:transparent;
 }
 
-.widget.contactform fieldset textarea {
-    height: 200px;
+.widget.contactform form fieldset textarea {
     width: 100%;
     border:1px solid @color-swatch3;
     font-family: @font-swatch5-font-family;
@@ -841,7 +887,7 @@ footer {
     margin-top: 6px;
     margin-bottom: 20px;
     resize: none;
-    padding: 0;
+    padding: 10px 0px 100px 0px;
     background-color:transparent;
 }
 
@@ -864,7 +910,7 @@ footer {
     color:    @color-swatch5;
 }
 
-.widget.contactform fieldset button.btn {
+.widget.contactform form fieldset button.btn {
   padding: 15px 30px;
   border:1px solid @color-swatch3;
   font-family: @font-swatch7-font-family;
@@ -875,7 +921,7 @@ footer {
   background-color:transparent;
 }
   
-.widget.contactform fieldset button.btn:hover {
+.widget.contactform form fieldset button.btn:hover {
   background-color: transparent;
   color: @font-swatch7-color;
   cursor: pointer;
@@ -925,15 +971,23 @@ footer {
         background-position: 12px center;
         padding-right: 0;
     }
-    .widget .extendednavigation a.pull:after {
+    .widget .extendednavigation a.menu-pull:after {
         right: 42%;
     }
-    .widget.menusections a.pull {
+    .widget.menusections a.menu-pull {
         top:20px;
+        right:42%;
     }
         .widget.menusections{
         width:20%;
         margin:0px auto;
+    }
+    .bk-content-text h2:before, .bk-content-text h2:after {
+      display:none;
+    }
+
+    .widget.menu .main .menu-header h1:before, .widget.menu .main .menu-subsection-header h1:before, .widget.menu .main .menu-header h2:before, .widget.menu .main .menu-subsection-header h2:before, .widget.menu .main .menu-header h1:after, .widget.menu .main .menu-subsection-header h1:after, .widget.menu .main .menu-header h2:after, .widget.menu .main .menu-subsection-header h2:after {
+        display:none;
     }
 }
 
@@ -949,8 +1003,12 @@ footer {
         background-position: 12px center;
         padding-right: 0;
     }
-    .widget .extendednavigation a.pull:after {
+    .widget .extendednavigation a.menu-pull:after {
         right: 38%;
+    }
+
+    .widget.menusections a.menu-pull{
+        right:38%;
     }
 
         .widget.menusections a.pull {
@@ -958,32 +1016,61 @@ footer {
     }
 
     header .companyheader .companyname a {
-          font-size: bkscale(@font-swatch1-font-size,0.9);
-          line-height:bkscale(@font-swatch1-line-height,0.9);
+          font-size: bkscale(@font-swatch1-font-size,1);
+          line-height:bkscale(@font-swatch1-line-height,1);
           padding-bottom:0px;  
     }
 
     .bk-content-text p {
-        font-size: bkscale(@font-swatch5-font-size,0.9);
-          line-height:bkscale(@font-swatch5-line-height,0.9);
+        font-size: bkscale(@font-swatch5-font-size,1.2);
+          line-height:bkscale(@font-swatch5-line-height,1.2);
     }
 
     h1 {
-          font-size: bkscale(@font-swatch1-font-size,0.7);
-          line-height:bkscale(@font-swatch1-line-height,0.7);
+          font-size: bkscale(@font-swatch1-font-size,0.8);
+          line-height:bkscale(@font-swatch1-line-height,0.8);
     }
 
     h2 {
-          font-size: bkscale(@font-swatch2-font-size,0.7);
-          line-height:bkscale(@font-swatch2-line-height,0.7);
+          font-size: bkscale(@font-swatch2-font-size,0.6);
+          line-height:bkscale(@font-swatch2-line-height,0.6);
     }
-    h3 {
-          font-size: bkscale(@font-swatch3-font-size,0.7);
-          line-height:bkscale(@font-swatch3-line-height,0.7);
+    .bk-content-text h2 {
+        font-size: bkscale(@font-swatch3-font-size,1.2);
+        line-height:bkscale(@font-swatch3-line-height,1.2);
     }
+    .menu-subsection-name {
+        font-size: bkscale(@font-swatch2-font-size,0.6);
+          line-height:bkscale(@font-swatch2-line-height,0.6);
+    }
+
+    .widget.menu {
+        padding:30px 0 0;
+    }
+
     .widget.menusections{
         width:20%;
         margin:0px auto;
+    }
+
+    .widget.menu {
+      margin-top:0px;
+    }
+
+    .bk-content-text h2:before, .bk-content-text h2:after {
+      display:none;
+    }
+
+    header .companyheader{
+        margin:80px 0px;
+    }
+
+    .widget.contactform form {
+        padding-top:10px;
+    }
+
+    .widget.menu .main .menu-header h1, .widget.menu .main .menu-subsection-header h1, .widget.menu .main .menu-header h2, .widget.menu .main .menu-subsection-header h2 {
+        padding:0;
     }
 }
 

@@ -67,9 +67,9 @@
         },
         "font2": {
             "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
-            "font-size": "48px",
+            "font-size": "36px",
             "font-weight": "400",
-            "line-height": "48px",
+            "line-height": "38px",
             "color": "@color-swatch4",
             "letter-spacing": "6px"
         },
