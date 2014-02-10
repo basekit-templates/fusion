@@ -140,29 +140,37 @@ ol, li, ul {
 }
 
 .bk-content-text h2:after {
-                        border-top: 2px solid @color-swatch3;
-                        content: "";
-                        display: inline-block;
-                        height: .1em;
-                        position: relative;
-                        vertical-align: middle;
-                        width: 30%;
-                        margin-bottom: .15em;
-                        left:1em;
-                        margin-right:-50px;
+    border-top: 2px solid @color-swatch3;
+    content: "";
+    display: inline-block;
+    height: .1em;
+    position: relative;
+    vertical-align: middle;
+    width: 27.5%;
+    margin-bottom: .15em;
+    left:1em;
+    margin-right:-100px;
 }
 
 .bk-content-text h2:before {
-                        border-top: 2px solid @color-swatch3;
-                        content: "";
-                        display: inline-block;
-                        height: .1em;
-                        position: relative;
-                        vertical-align: middle;
-                        width: 30%;
-                        margin-bottom: .15em;
-                        right:1em;
-                        margin-left:-50px;
+    border-top: 2px solid @color-swatch3;
+    content: "";
+    display: inline-block;
+    height: .1em;
+    position: relative;
+    vertical-align: middle;
+    width: 27.5%;
+    margin-bottom: .15em;
+    right:1em;
+    margin-left:-100px;
+}
+
+.main {
+    padding:0;
+}
+
+.widget.menu .main {
+    background-color:transparent;
 }
 
 /* ===============================
@@ -171,9 +179,8 @@ ol, li, ul {
 
 .widget.menusections {
     text-align: center;
-    padding: 20px 0 10px 0;
+    padding: 0px 0 6px 0;
     min-height: 30px;
-    border-top:1px solid @color-swatch3;
     border-bottom:1px solid @color-swatch3;
     ul {
         display: inline-block;
@@ -186,7 +193,7 @@ ol, li, ul {
             /* Then these styles are applied */
             width: 100%;
             margin: 30px 0 0;
-            background-color: @color-swatch1;
+            background-color: transparent;
         }
 
         /* ALIGN CENTER */
@@ -290,7 +297,7 @@ ol, li, ul {
 header {
 
     padding:0;
-
+    background-color:transparent;
  .companyheader {
         margin: 80px 0px;
         width:100%;
@@ -357,13 +364,15 @@ header {
 
 .container{
     border:1px solid black;
-    margin-top:40px;
     padding-bottom:40px;
 }
 
 .widget.menu {
     margin:0 auto;
     margin-top: 50px;
+    .menu-subsection {
+        border:0;
+    }
     @media only screen and (max-width: 1084px) {
          width: 90%;
     }
@@ -373,7 +382,6 @@ header {
     }
 
     .main {
-        background-color: lighten(@color-swatch1,3%);
         width: 90%;
         padding-top:30px;
         margin: 0 auto;
@@ -555,33 +563,85 @@ header {
                             padding: 0;
                         }
                         .menu-section-item-dietary-props {
-                            display: block;
-                            margin: 0;
-                            padding: 0;
-                            .dietary-icon {
-                                background-color: @color-swatch3;
-                                width: 20px;
-                                height: 20px;
-                                background-size: 20px;
-                                margin: 5px 5px 0 0;
-                                background-repeat: no-repeat;
-                                background-position: center;
-                                display: inline-block;
-                                border-radius: 50%;
-                            }
-                            .vegetarian-icon {
-                                background-image: image('/images/veggie-icon.png');
-                            }
-                            .glutenFree-icon {
-                                background-image: image('/images/gf-icon.png');
-                              }
-                            .nutFree-icon {
-                                background-image: image('/images/nutFree-icon.png');
-                              }
-                            .dairyFree-icon {
-                                background-image: image('/images/dairyFree-icon.png');
-                              }
-                        } /* end menu-section-item-dietary-props */
+                                margin-top: 0.5em;
+                                padding: 0;
+                                clear: both;
+                                display: block;
+                                .dietary-icon {
+                                    background-color: @color-swatch5;
+                                    width: auto;
+                                    height: 25px;
+                                    border: 0;
+                                    -webkit-border-radius: 5px;
+                                    -moz-border-radius: 5px;
+                                    border-radius: 5px;
+                                    background-repeat: no-repeat;
+                                    background-size: 19px;
+                                    background-position: center;
+                                    display: block;
+                                    font-family:@font-swatch5-font-family;
+                                    font-size:@font-swatch5-font-size;
+                                    z-index: 9999999;
+                                    color: @color-swatch1;
+                                    margin-right: 5px;
+                                    margin-bottom: 5px;
+                                    float: left;
+                                }
+                                .vegetarian-icon {
+                                    &:before { 
+                                    content: "veggie";
+                                    padding: 0 8px;                  
+                                    }
+                                }
+                                .vegan-icon {
+                                    &:before { 
+                                    content: "vegan";
+                                    padding: 0 8px;
+                                    }
+                                }
+                                .glutenfree-icon {
+                                    &:before { 
+                                    content: "gf";
+                                    padding: 0 8px;
+                                    }
+                                }
+                                .nutfree-icon {
+                                    &:before { 
+                                    content: "nf";
+                                    padding: 0 8px;
+                                    }
+                                }
+                                .dairyfree-icon {
+                                    &:before { 
+                                    content: "df";
+                                    padding: 0 8px;
+                                    }
+                                }
+                                .not-spicy-icon {
+                                    display: none;
+                                }
+                                .spicy-icon {
+                                    &:before { 
+                                    content: "mild";
+                                    padding: 7px;
+                                    }
+                                  }
+
+                                .medium-spicy-icon {
+                                    &:before { 
+                                    content: "medium";
+                                    padding: 7px;
+                                    }
+                                  }
+
+                                .hot-icon {
+                                    &:before { 
+                                    content: "hot";
+                                    padding: 7px;
+                                    }
+                                }
+
+                            } /* end menu-section-item-dietary-props */
 
                         .menu-item-description, .menu-section-item-description {
                             margin-bottom: 0.5em;
@@ -649,12 +709,18 @@ header {
                         background-repeat: no-repeat;
                         background-position: center;
                     }
-                    .vegetarian-icon {
-                        background-image: image('/images/veggie-icon.png');
-                    }
-                    .glutenFree-icon {
-                        background-image: image('/images/gf-icon.png');
-                    }
+                            .vegetarian-icon {
+                                background-image: image('/images/v.png');
+                            }
+                            .glutenFree-icon {
+                                background-image: image('/images/gf.png');
+                              }
+                            .nutFree-icon {
+                                background-image: image('/images/nf.png');
+                              }
+                            .dairyFree-icon {
+                                background-image: image('/images/df.png');
+                              }
                     dd {    /* text for icon */
                         font-family:@font-swatch5-font-family;
                         font-size:@font-swatch5-font-size;
@@ -670,10 +736,6 @@ header {
 
 } /* end .widget.menu */
 
-.main{
-    padding:0;
-}
-
 /* ===============================
    7. FOOTER
   =============================== */
@@ -688,9 +750,9 @@ footer {
     margin-top: 3em;
     min-height: 40px;
     background-color: @color-swatch3;
-
+    padding:0.1em 0em 0.1em 0em;
         .widget.content {
-            padding: 1em 0em 0em 0em;
+            padding: 0.5em 0em 0em 0em;
             margin: 0 auto;
             text-align:center;
             @media only screen and (max-width: 1084px) {
@@ -725,7 +787,7 @@ footer {
     font-size:1em;
     font-family:@font-swatch7-font-family;
     background-color:@color-swatch3;
-    padding:0.7em 0em 0.5em 0em;
+    padding:0.1em 0em 0.1em 0em;
     margin:0;
     
     a {
@@ -837,7 +899,7 @@ footer {
 
 .widget.contactform form {
     display: block;
-    padding-top: 30px;
+    padding-top: 20px;
     background-color: @color-swatch1;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -863,7 +925,7 @@ footer {
 }
 
 .widget.contactform form fieldset input {
-    width: 100%;
+    width: 60%;
     padding:5px 0px;
     border:1px solid @color-swatch3;
     font-family: @font-swatch5-font-family;
@@ -872,21 +934,27 @@ footer {
     text-indent: 12px;
     margin-bottom: 20px;
     background-color:transparent;
+    margin:0px auto;
+    display:table;
+    margin-bottom:20px;
 }
 
 .widget.contactform form fieldset textarea {
-    width: 100%;
+    width: 60%;
     border:1px solid @color-swatch3;
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
     color: @font-swatch5-color;
-    text-indent: 8px;
+    text-indent: 12px;
     padding-top: 14px;
     margin-top: 6px;
     margin-bottom: 20px;
     resize: none;
     padding: 10px 0px 100px 0px;
     background-color:transparent;
+    margin:0px auto;
+    display:table;
+    margin-bottom:20px;
 }
 
 .widget.contactform fieldset input:focus, .widget.contactform fieldset textarea:focus {
@@ -987,6 +1055,18 @@ footer {
     .widget.menu .main .menu-header h1:before, .widget.menu .main .menu-subsection-header h1:before, .widget.menu .main .menu-header h2:before, .widget.menu .main .menu-subsection-header h2:before, .widget.menu .main .menu-header h1:after, .widget.menu .main .menu-subsection-header h1:after, .widget.menu .main .menu-header h2:after, .widget.menu .main .menu-subsection-header h2:after {
         display:none;
     }
+
+        .widget.contactform form fieldset input {
+    width: 80%;
+    }
+
+    .widget.contactform form fieldset textarea {
+    width: 80%;
+    }
+
+    .widget.contactform form {
+        padding-top:0;
+    }
 }
 
 /* ===============================
@@ -1069,6 +1149,18 @@ footer {
 
     .widget.menu .main .menu-header h1, .widget.menu .main .menu-subsection-header h1, .widget.menu .main .menu-header h2, .widget.menu .main .menu-subsection-header h2 {
         padding:0;
+    }
+
+    .widget.contactform form fieldset input {
+        width: 90%;
+    }
+
+    .widget.contactform form fieldset textarea {
+        width: 90%;
+    }
+
+    .widget.contactform form {
+        padding-top:0;
     }
 }
 

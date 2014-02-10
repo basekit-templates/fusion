@@ -1,3 +1,3 @@
 
-Mau Cafe
+Fusion Menu Template
 ========

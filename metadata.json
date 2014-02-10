@@ -75,7 +75,7 @@
         },
         "font3": {
             "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
-            "font-size": "24px",
+            "font-size": "20px",
             "font-weight": "400",
             "line-height": "28px",
             "color": "@color-swatch3",
@@ -90,8 +90,8 @@
             "letter-spacing": "inherit"
         },
         "font5": {
-            "font-family": "\"Arial\", \"Helvetica\", sans-serif",
-            "font-size": "12px",
+            "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",     
+            "font-size": "16px",
             "font-weight": "300",
             "line-height": "24px",
             "color": "@color-swatch5",
@@ -99,7 +99,7 @@
         },
         "font6": {
             "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
-            "font-size": "24px",
+            "font-size": "20px",
             "font-weight": "400",
             "line-height": "26px",
             "color": "@color-swatch5",
