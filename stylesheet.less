@@ -131,6 +131,7 @@ ol, li, ul {
 
 .contacttextwidget {
     text-align:center;
+    margin-bottom:20px;
 }
 
 .bk-content-text h2 {
@@ -364,7 +365,7 @@ header {
    =============================== */
 
 .container{
-    border:1px solid black;
+    border:1px solid @color-swatch3;
     padding-bottom:40px;
 }
 
@@ -520,8 +521,16 @@ header {
                             -moz-border-radius: 5px;
                             border-radius: 5px;
                             width: 100%;
-                            margin-top: 5px;
                         }
+
+                        .menu-item-image-wrap {
+                            background-size: cover;
+                            background-position: center;
+                            -webkit-background-size: cover;
+                            -moz-background-size: cover;
+                            -o-background-size: cover;
+                        }
+
                         .menu-item-price p {   /* standard-price */
                             font-family:@font-swatch9-font-family;
                             font-size:@font-swatch9-font-size;
@@ -582,6 +591,11 @@ header {
                                     display: block;
                                     font-family:@font-swatch5-font-family;
                                     font-size:@font-swatch5-font-size;
+                                    font-weight: @font-swatch5-font-weight;
+                                    line-height:@font-swatch5-line-height;
+                                    color:@font-swatch5-color;
+                                    letter-spacing: @font-swatch5-letter-spacing;
+                                    font-weight:;
                                     z-index: 9999999;
                                     color: @color-swatch1;
                                     margin-right: 5px;
@@ -930,8 +944,8 @@ footer {
 }
 
 .widget.contactform form fieldset input {
-    width: 60%;
-    padding:5px 0px;
+    width: 50%;
+    padding: 15px 0px;
     border:1px solid @color-swatch3;
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
@@ -945,7 +959,7 @@ footer {
 }
 
 .widget.contactform form fieldset textarea {
-    width: 60%;
+    width: 50%;
     border:1px solid @color-swatch3;
     font-family: @font-swatch5-font-family;
     font-size: @font-swatch5-font-size;
