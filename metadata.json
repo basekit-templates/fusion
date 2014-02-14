@@ -76,7 +76,7 @@
         "font3": {
             "font-family": "\"Josefin Sans\", \"Helvetica\", sans-serif",
             "font-size": "20px",
-            "font-weight": "400",
+            "font-weight": "700",
             "line-height": "28px",
             "color": "@color-swatch3",
             "letter-spacing": "2px"

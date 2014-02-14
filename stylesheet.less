@@ -63,68 +63,6 @@ h1, h2, h3, h4, h5, p {
     font-size: @font-swatch8-font-size;           
 }
 
-h1 {
-    font-family:@font-swatch1-font-family;
-    font-weight: @font-swatch1-font-weight;
-    color:@font-swatch1-color;
-    line-height:@font-swatch1-line-height;
-    letter-spacing: @font-swatch1-letter-spacing;
-    font-size: @font-swatch1-font-size;
-}
-
-h2 {
-    font-family:@font-swatch2-font-family;
-    font-size: @font-swatch2-font-size;
-    font-weight: @font-swatch2-font-weight;
-    line-height:@font-swatch2-line-height;
-    color: @font-swatch2-color;
-    letter-spacing: @font-swatch2-letter-spacing;
-    margin:40px 0 0 0;
-}
-
-h3 {
-    font-family:@font-swatch3-font-family;
-    font-size:@font-swatch3-font-size;
-    font-weight: @font-swatch3-font-weight;
-    color: @font-swatch3-color;
-    line-height:@font-swatch3-line-height;
-    letter-spacing: @font-swatch3-letter-spacing;
-}
-
-h4 {
-    font-family:@font-swatch4-font-family;
-    font-size:@font-swatch4-font-size;
-    font-weight:@font-swatch4-font-weight;
-    line-height:@font-swatch4-line-height;
-    color:@font-swatch4-color;
-    letter-spacing: @font-swatch4-letter-spacing;
-}
-
-p {
-    font-family:@font-swatch5-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight: @font-swatch5-font-weight;
-    line-height:@font-swatch5-line-height;
-    color:@font-swatch5-color;
-    letter-spacing: @font-swatch5-letter-spacing;
-}
-
-ol, li, ul {
-    font-family:@font-swatch5-font-family;
-    font-size:@font-swatch5-font-size;
-    font-weight:@font-swatch5-font-weight;
-    line-height:@font-swatch5-line-height;
-    color:@font-swatch5-color;
-}
-
-/* ===============================
-   2. VARIABLE MEDIA QUERIES
-   =============================== */
-
-@tablet: ~"only screen and (max-width: 768px)";
-@mobile: ~"only screen and (max-width: 480px)";
-@media only screen and (max-width: 1084px);
-
 /* ===============================
    3. CUSTOM CSS
    =============================== */
@@ -174,6 +112,206 @@ ol, li, ul {
     background-color:transparent;
 }
 
+ .bk-pt-default .widget.extendednavigation {
+    margin-top:0px;
+    background-color:@color-swatch3;
+    width:100%;
+    margin:0px auto;
+    display:table;
+    color: @font-swatch6-color;
+ }
+
+ /* ===============================
+   EXTENDED NAVIGATION
+   =============================== */
+
+.widget {
+    .extendednavigation {
+        margin:0px auto;
+        display:table;
+        margin-top:20px;
+        padding-bottom:10px;
+        border-bottom:1px solid lighten(@color-swatch3,95%);
+        @media @tablet {
+            background-color: transparent;
+        }
+        li {
+            ul {
+                display: none !important;
+            }
+        }
+        ul {
+            display: table;
+            float: none;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0;
+            @media @tablet {
+                /* Hidden until nav icon is clicked */
+                display: none;
+                /* Then these styles are applied */
+                width: 100%;
+                border-top: 1px solid @color-swatch7;
+                margin: 0;
+                padding: 50px 0 0;
+            }
+            li {
+                float: left;
+                display: block;
+                padding: 5px 0;
+                @media @tablet {
+                    width: 100%;
+                    padding: 1em 0;
+                    border-bottom: 1px dotted @color-swatch2;
+                }
+                &:last-child {
+                    @media @tablet {
+                        border-bottom: 1px solid @color-swatch2;
+                    }
+                }
+
+                &:hover {
+                    ul {
+                        display: block !important;
+                        position: absolute;
+                        background-color: @color-swatch3;
+                        z-index: 500;
+                        padding: 0;
+                        margin: 7px 0 0 0;
+                        li {
+                            display: block;
+                            width: 100%;
+                                .box-sizing {
+                                    a {
+                                        display: block;
+                                        padding: 0;
+                                    }
+                                }
+                        }
+                    }
+                }
+
+                a {
+                    display: block;
+                    padding: 0 15px;
+                    font-family: @font-swatch6-font-family;
+                    font-size: @font-swatch6-font-size;
+                    font-weight: @font-swatch6-font-weight;
+                    color: @font-swatch7-color;
+                    line-height: @font-swatch6-line-height;
+                    letter-spacing: @font-swatch6-letter-spacing;
+                    &:hover {
+                        color: @font-swatch6-color-hover;
+                        text-decoration: underline;
+                    }
+                }
+
+                &.folder {
+                    /* Folder dropdown arrow BG style goes Here */  
+                    margin-right: 20px;            
+                    cursor: pointer;
+                    background-image: none;
+                    @media @tablet {
+                        background-image:image('/images/texture-background.png');
+                        background-repeat: repeat;
+                        background-position: center;
+                    }
+                    .text {
+                        display: block;
+                        padding: 0 15px;
+                        font-family: @font-swatch6-font-family;
+                        font-size: @font-swatch6-font-size;
+                        font-weight: @font-swatch6-font-weight;
+                        color: @font-swatch7-color;
+                        line-height: @font-swatch6-line-height;
+                        letter-spacing: @font-swatch6-letter-spacing;
+                        position: relative;
+                        &:after {
+                            content: "\25BC";
+                            font-size: 8px;
+                            position: absolute;
+                            top: 1px;
+                            display: block;
+                            z-index: 9999999;
+                            right: 0;
+                            color: @color-swatch1;
+                            @media @tablet {
+                                font-size: 10px;
+                                padding-right: 10px;
+                            }
+                        }
+                        @media @tablet {
+                                color: @color-swatch5;
+                            }
+                        &:hover {
+                            text-decoration: underline;
+                            @media @tablet {
+                                color: @color-swatch5;
+                            }
+                        }
+                    }
+                    ul {
+                        padding: 0;
+                        @media @tablet {
+                            margin-top: 14px;
+                        }
+                        li {
+                            a { 
+                                .text {
+                                    color: @font-swatch6-color;
+                                    padding: 0;
+                                    &:after {
+                                        content: "";
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        a {
+           &.pull {
+               display: none;
+               @media @tablet {
+                   display: block;
+                   position: absolute;
+                   margin: 0 auto;
+                   width: 100%;
+                   top: 0;
+                   &:hover {
+                       cursor: pointer;
+                   }
+                   &:after {
+                        content:"\2193";
+                        color: @color-swatch3;
+                        font-size: 1.3em;
+                        text-align: center;
+                        width: 81px;
+                        height: 38px;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        margin: 0 auto;
+                        background-color: lighten(@color-swatch1,10%);
+                        display: inline-block;
+                        position: absolute;
+                        border: none;
+                        -webkit-border-radius: 0 0 50px 50px;
+                        -moz-border-radius: 0 0 50px 50px;
+                        border-radius: 0 0 50px 50px;
+                        -webkit-box-shadow: 0px 3px 0px darken(@color-swatch1,10%);
+                        -moz-box-shadow:    0px 3px 0px darken(@color-swatch1,10%);
+                        box-shadow:         0px 3px 0px darken(@color-swatch1,10%);
+                   }
+               }
+           }
+       }
+    }
+}
+
 /* ===============================
    4. MENU SECTIONS NAVIGATION
    =============================== */
@@ -191,7 +329,6 @@ ol, li, ul {
         padding: 0;
         @media @tablet {
             /* Hidden until nav icon is clicked */
-            display: none;
             /* Then these styles are applied */
             width: 100%;
             margin: 30px 0 0;
@@ -256,8 +393,7 @@ ol, li, ul {
                 line-height:@font-swatch6-line-height;
                 letter-spacing: @font-swatch6-letter-spacing;
                 &:hover {
-                    color: @font-swatch6-color-hover;
-                    text-decoration: none;
+                    text-decoration: underline;
                 }
                 &:after {
                         color: @color-swatch6;
@@ -296,12 +432,11 @@ ol, li, ul {
    5. HEADER
    =============================== */
 
-header {
-
+header.bk-header {
     padding:0;
     background-color:transparent;
  .companyheader {
-        margin: 80px 0px;
+        margin: 160px 0px;
         width:100%;
         float:none;
 
@@ -367,7 +502,7 @@ header {
 .container{
     border:1px solid @color-swatch3;
     padding-bottom: 80px;
-    border-bottom: 50px solid black;
+    border-bottom: 50px solid @color-swatch3;
 }
 
 .widget.menu {
@@ -578,10 +713,12 @@ header {
                                 padding: 0;
                                 clear: both;
                                 display: block;
+                                margin:0px auto;
+                                display:table;
                                 .dietary-icon {
                                     background-color: @color-swatch5;
                                     width: auto;
-                                    height: 25px;
+                                    height: auto;
                                     border: 0;
                                     -webkit-border-radius: 5px;
                                     -moz-border-radius: 5px;
@@ -602,59 +739,7 @@ header {
                                     margin-right: 5px;
                                     margin-bottom: 5px;
                                     float: left;
-                                }
-                                .vegetarian-icon {
-                                    &:before { 
-                                    content: "veggie";
-                                    padding: 0 8px;                  
-                                    }
-                                }
-                                .vegan-icon {
-                                    &:before { 
-                                    content: "vegan";
-                                    padding: 0 8px;
-                                    }
-                                }
-                                .glutenfree-icon {
-                                    &:before { 
-                                    content: "gf";
-                                    padding: 0 8px;
-                                    }
-                                }
-                                .nutfree-icon {
-                                    &:before { 
-                                    content: "nf";
-                                    padding: 0 8px;
-                                    }
-                                }
-                                .dairyfree-icon {
-                                    &:before { 
-                                    content: "df";
-                                    padding: 0 8px;
-                                    }
-                                }
-                                .not-spicy-icon {
-                                    display: none;
-                                }
-                                .spicy-icon {
-                                    &:before { 
-                                    content: "mild";
-                                    padding: 7px;
-                                    }
-                                  }
-
-                                .medium-spicy-icon {
-                                    &:before { 
-                                    content: "medium";
-                                    padding: 7px;
-                                    }
-                                  }
-
-                                .hot-icon {
-                                    &:before { 
-                                    content: "hot";
-                                    padding: 7px;
-                                    }
+                                    padding:5px;
                                 }
 
                             } /* end menu-section-item-dietary-props */
@@ -725,18 +810,6 @@ header {
                         background-repeat: no-repeat;
                         background-position: center;
                     }
-                            .vegetarian-icon {
-                                background-image: image('/images/v.png');
-                            }
-                            .glutenFree-icon {
-                                background-image: image('/images/gf.png');
-                              }
-                            .nutFree-icon {
-                                background-image: image('/images/nf.png');
-                              }
-                            .dairyFree-icon {
-                                background-image: image('/images/df.png');
-                              }
                     dd {    /* text for icon */
                         font-family:@font-swatch5-font-family;
                         font-size:@font-swatch5-font-size;
@@ -751,6 +824,14 @@ header {
     }/* end main */
 
 } /* end .widget.menu */
+
+.menu-item-nutritional-title {
+    text-decoration:underline;
+}
+
+.search-term {
+    display:block;
+}
 
 /* ===============================
    7. FOOTER
@@ -846,6 +927,12 @@ footer {
     display: none;
 }
 
+.widget.socialicons span a {
+    background-color: @color-swatch3;
+    &:hover {
+        background-color: lighten(@color-swatch3,20%);
+    };
+}
 
 /* SVG ICONS */
 
@@ -909,6 +996,299 @@ footer {
 .widget.socialicons span.bk-socialicons-youtube a,
 .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
     background-image: image('/images/social/socialicons-youtube.png')
+}
+
+/* ===============================
+  BLOG
+   =============================== */
+
+.widget {
+    &.bloglistposts {
+        .blog-post-item {
+            border-bottom: 1px dotted @color-swatch5;
+        }
+
+    }
+}
+
+.blog-post-item {
+    margin: 1.5em 0;
+    padding-bottom: 1em;
+    h2 {
+        a {
+            font-family: @font-swatch2-font-family;
+            font-size: @font-swatch2-font-size;
+            font-weight: @font-swatch2-font-weight;
+            line-height: @font-swatch2-line-height;
+            color: @font-swatch2-color;
+            letter-spacing: @font-swatch2-letter-spacing;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.blog-post-metadata {
+    background-color: transparent;
+    background-image: none;
+    margin-top: 0;
+    text-align: left;
+}
+
+.blog-list-footer {
+    background-color: transparent;
+    background-image: none;
+}
+
+.blog-post-more-link {
+    float: left;
+    width: 100%;
+}
+
+/* BLOG SEARCH */
+.blogsearch {
+    form {
+        button {
+            padding: 10px;
+            color: @font-swatch7-color;
+            font-size: @font-swatch6-font-size;
+            font-weight: @font-swatch6-font-weight;
+            line-height: @font-swatch6-line-height;
+            background-color: @font-swatch7-background-color;
+            border: none;
+        }
+    }
+}
+
+/* ===============================
+   SLIDESHOW WIDGET
+   =============================== */
+
+.widget.responsiveslideshow {
+    .slideshow-image-list,
+    .slideshow-widget {
+        min-height: 450px;
+        @media @tablet {
+            min-height: 350px;
+        }
+        @media @mobile {
+            min-height: 280px;
+            height: 280px;
+        }
+    }
+    .title {
+        display: block;
+    }
+    .content-wrapper {
+        background: rgba(0,0,0,0.5);
+    }
+    .slideshow-widget {
+        /* Arrows */
+        .btn-prev,
+        .btn-next {
+            font-size: 0;
+            z-index: 11;
+            text-indent: -99999px;
+            width: 40px;
+            height: 40px;
+            background: rgba(0,0,0,0.5);
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+        .btn-prev {
+            &:after {
+                content: "\2190";
+                color: #fff;
+                top: 11px;
+            }
+        }
+        .btn-next {
+            &:after {
+                content: "\2192";
+                color: #fff;
+                top: 11px;
+            }
+        }
+        /* Play Button */
+        .btn-play {
+            background: rgba(0,0,0,0.5);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            &:after {
+                color: #fff;
+                letter-spacing: -4px;
+                top: 5px;
+            }
+        }
+    }
+    /* Slideshow Controls */
+    .slideshow-widget-controls {
+        .dot {
+            width: 11px;
+            height: 11px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            &.selected {
+                background-color: @color-swatch5;
+            }
+        }
+    }
+}
+
+
+
+/* ===============================
+   BUTTON
+   =============================== */
+
+button.btn {
+    border:1px solid @color-swatch3;
+    padding:20px;
+    color: @font-swatch7-color;
+}
+
+button.btn:hover {
+  cursor: pointer;
+  background-color: lighten(@color-swatch3,95%);
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+
+/* ===============================
+   SIGN UP FORM
+   =============================== */
+
+.signupform fieldset button {
+    padding:10px 20px;
+    border:1px solid @color-swatch3;
+}
+
+.signupform fieldset button:hover {
+  cursor: pointer;
+  background-color: lighten(@color-swatch3,95%);
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.signupform fieldset input {
+    width:65%;
+}
+
+/* ===============================
+   FORM
+   =============================== */
+
+.widget.profile form button {
+    border:1px solid @color-swatch3;
+    padding:12px 20px;
+}
+
+.widget.profile form button:hover {
+  cursor: pointer;
+  background-color: lighten(@color-swatch3,95%);
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.widget.profile form fieldset input {
+    width:65%;
+}
+
+/* ===============================
+   BLOG SEARCH
+   =============================== */
+
+.blogsearch form button {
+    font-family: @font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
+    font-weight:@font-swatch7-font-weight;
+    color: @font-swatch7-color;
+    border:1px solid @color-swatch3;
+    padding:4px 20px;
+}
+
+.blogsearch form button:hover {
+  cursor: pointer;
+  background-color: lighten(@color-swatch3,95%);
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.blog-search-input {
+    width:37%;
+}
+
+/* ===============================
+   PAYPAL BUTTON
+   =============================== */
+
+.widget.paypalbuynow .widget.button.paypal {
+    background-color:@color-swatch3;
+    color:@font-swatch6-color;
+}
+
+.widget.paypalbuynow .widget.button.paypal:hover {
+  cursor: pointer;
+  background-color: lighten(@color-swatch3,15%);
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+
+/* ===============================
+   TWITTER BUTTON
+   =============================== */
+
+.widget.tweet a {
+    background-color:@color-swatch3;
+    color:@font-swatch6-color;
+}
+
+.widget.tweet a:hover {
+  cursor: pointer;
+  background-color: lighten(@color-swatch3,15%);
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+
+/* ===============================
+   DROPBOX BUTTON
+   =============================== */
+
+.widget.dropbox button {
+    background-color:@color-swatch3;
+    color:@font-swatch6-color;
+}
+
+.widget.dropbox button:hover {
+  cursor: pointer;
+  background-color: lighten(@color-swatch3,15%);
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+
+
+
+.signupform fieldset input, .widget.profile form fieldset input {
+    width:62%;
 }
 
 /* ===============================
@@ -1007,9 +1387,8 @@ footer {
 }
   
 .widget.contactform form fieldset button.btn:hover {
-  background-color: transparent;
-  color: @font-swatch7-color;
   cursor: pointer;
+  background-color: lighten(@color-swatch3,95%);
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1061,10 +1440,10 @@ footer {
     }
     .widget.menusections a.menu-pull {
         top:20px;
-        right:42%;
+        right:0;
     }
         .widget.menusections{
-        width:20%;
+        width:100%;
         margin:0px auto;
     }
     .bk-content-text h2:before, .bk-content-text h2:after {
@@ -1104,15 +1483,16 @@ footer {
         right: 38%;
     }
 
-    .widget.menusections a.menu-pull{
-        right:38%;
+    .widget.menusections a.menu-pull {
+        top:20px;
+        right:0;
     }
 
-        .widget.menusections a.pull {
+    .widget.menusections a.pull {
         top:20px;
     }
 
-    header .companyheader .companyname a {
+    header.bk-header .companyheader .companyname a {
           font-size: bkscale(@font-swatch1-font-size,1);
           line-height:bkscale(@font-swatch1-line-height,1);
           padding-bottom:0px;  
@@ -1146,7 +1526,7 @@ footer {
     }
 
     .widget.menusections{
-        width:20%;
+        width:100%;
         margin:0px auto;
     }
 
@@ -1158,7 +1538,7 @@ footer {
       display:none;
     }
 
-    header .companyheader{
+    header.bk-header .companyheader{
         margin:80px 0px;
     }
 
@@ -1180,6 +1560,18 @@ footer {
 
     .widget.contactform form {
         padding-top:0;
+    }
+
+    .widget.clicktocall a {
+        background-color:@color-swatch3;
+        color: @font-swatch6-color;
+        font-weight:@font-swatch3-font-weight;
+    }
+
+    .widget.clicktocall a:hover {
+        background-color:lighten(@color-swatch3,15%);
+        color:@font-swatch6-color;
+        font-weight:@font-swatch3-font-weight;
     }
 }
 
