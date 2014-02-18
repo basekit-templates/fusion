@@ -72,38 +72,6 @@ h1, h2, h3, h4, h5, p {
     margin-bottom:20px;
 }
 
-.bk-content-text h2 {
-    background-color:@color-swatch1;
-    text-align:center;
-    overflow:hidden;
-}
-
-.bk-content-text h2:after {
-    border-top: 2px solid @color-swatch3;
-    content: "";
-    display: inline-block;
-    height: .1em;
-    position: relative;
-    vertical-align: middle;
-    width: 27.5%;
-    margin-bottom: .15em;
-    left:1em;
-    margin-right:-100px;
-}
-
-.bk-content-text h2:before {
-    border-top: 2px solid @color-swatch3;
-    content: "";
-    display: inline-block;
-    height: .1em;
-    position: relative;
-    vertical-align: middle;
-    width: 27.5%;
-    margin-bottom: .15em;
-    right:1em;
-    margin-left:-100px;
-}
-
 .main {
     padding:0;
 }
@@ -111,15 +79,6 @@ h1, h2, h3, h4, h5, p {
 .widget.menu .main {
     background-color:transparent;
 }
-
- .bk-pt-default .widget.extendednavigation {
-    margin-top:0px;
-    background-color:@color-swatch3;
-    width:100%;
-    margin:0px auto;
-    display:table;
-    color: @font-swatch6-color;
- }
 
  /* ===============================
    EXTENDED NAVIGATION
@@ -130,10 +89,10 @@ h1, h2, h3, h4, h5, p {
         margin:0px auto;
         display:table;
         margin-top:20px;
-        padding-bottom:10px;
-        border-bottom:1px solid lighten(@color-swatch3,95%);
+        border-bottom:1px solid #eeeeee;
         @media @tablet {
             background-color: transparent;
+            margin-top:0;
         }
         li {
             ul {
@@ -151,7 +110,6 @@ h1, h2, h3, h4, h5, p {
                 display: none;
                 /* Then these styles are applied */
                 width: 100%;
-                border-top: 1px solid @color-swatch7;
                 margin: 0;
                 padding: 50px 0 0;
             }
@@ -162,11 +120,11 @@ h1, h2, h3, h4, h5, p {
                 @media @tablet {
                     width: 100%;
                     padding: 1em 0;
-                    border-bottom: 1px dotted @color-swatch2;
+                    border-bottom: 1px solid @color-swatch3;
                 }
                 &:last-child {
                     @media @tablet {
-                        border-bottom: 1px solid @color-swatch2;
+                        border-bottom: 0;
                     }
                 }
 
@@ -201,7 +159,6 @@ h1, h2, h3, h4, h5, p {
                     line-height: @font-swatch6-line-height;
                     letter-spacing: @font-swatch6-letter-spacing;
                     &:hover {
-                        color: @font-swatch6-color-hover;
                         text-decoration: underline;
                     }
                 }
@@ -227,7 +184,7 @@ h1, h2, h3, h4, h5, p {
                         letter-spacing: @font-swatch6-letter-spacing;
                         position: relative;
                         &:after {
-                            content: "\25BC";
+                            content: "";
                             font-size: 8px;
                             position: absolute;
                             top: 1px;
@@ -274,7 +231,6 @@ h1, h2, h3, h4, h5, p {
 
         a {
            &.pull {
-               display: none;
                @media @tablet {
                    display: block;
                    position: absolute;
@@ -286,11 +242,11 @@ h1, h2, h3, h4, h5, p {
                    }
                    &:after {
                         content:"\2193";
-                        color: @color-swatch3;
+                        color: @color-swatch4;
                         font-size: 1.3em;
                         text-align: center;
                         width: 81px;
-                        height: 38px;
+                        height: 37px;
                         top: 0;
                         right: 0;
                         left: 0;
@@ -312,6 +268,40 @@ h1, h2, h3, h4, h5, p {
     }
 }
 
+ .bk-pt-default .widget.extendednavigation {
+    padding:10px 0px;
+    background-color:@color-swatch3;
+    width:100%;
+    margin:0px auto;
+    display:table;
+    @media @tablet {
+        padding-top:21px;
+    }
+    ul {
+        padding:0;
+        li {
+            @media @tablet {
+            width: 100%;
+            padding: 1em 0;
+            border-bottom: 1px solid @color-swatch1; 
+        }
+            a {
+                color: @font-swatch6-color;
+            }
+            &.folder {
+                .text {
+                    color: @font-swatch6-color;
+                }
+            }
+        }
+    }
+ }
+
+ .bk-pt-default .extendednavigation {
+    border-bottom:0;
+    margin-top:0;
+ }
+
 /* ===============================
    4. MENU SECTIONS NAVIGATION
    =============================== */
@@ -331,7 +321,6 @@ h1, h2, h3, h4, h5, p {
             /* Hidden until nav icon is clicked */
             /* Then these styles are applied */
             width: 100%;
-            margin: 30px 0 0;
             background-color: transparent;
         }
 
@@ -377,6 +366,7 @@ h1, h2, h3, h4, h5, p {
                     width: 100%;
                     padding: 1em 0;
                     border-bottom: 1px dotted @color-swatch3;
+                    margin:0;
             }
             &:last-child {
                     @media @tablet {
@@ -396,7 +386,7 @@ h1, h2, h3, h4, h5, p {
                     text-decoration: underline;
                 }
                 &:after {
-                        color: @color-swatch6;
+                        color: @font-swatch6-color;
                 }
             }
             &:last-child a:after {
@@ -415,7 +405,6 @@ h1, h2, h3, h4, h5, p {
                     right: 49%;
                     &:after {
                         content:"";
-                        background: image('/images/nav-icon.png') no-repeat;
                         width: 15px;
                         height: 20px;
                         display: inline-block;
@@ -436,15 +425,13 @@ header.bk-header {
     padding:0;
     background-color:transparent;
  .companyheader {
-        margin: 160px 0px;
+        margin: 140px 0px 160px 0px;
         width:100%;
         float:none;
-
         .logo, .companyname {
             text-align: center;
             float:none;
         }
-
         .companyname a {
             display: block;
             font-family: @font-swatch10-font-family;
@@ -598,29 +585,7 @@ header.bk-header {
 
             /* ITEMS */
 
-            .menu-items { /* ol */
-                column-count: 3;
-                column-gap: 50px;
-               -moz-column-count: 3;
-               -moz-column-gap: 50px;
-               -webkit-column-count: 3;
-               -webkit-column-gap : 50px;
-
-                @media @tablet { 
-                    column-count: 2;
-                    column-gap: 60px;
-                   -moz-column-count: 2;
-                   -moz-column-gap: 60px;
-                   -webkit-column-count: 2;
-                   -webkit-column-gap : 60px;
-                }
-
-                @media @mobile { 
-                    column-count: 1;
-                   -moz-column-count: 1;
-                   -webkit-column-count: 1;
-                }
-                
+            .menu-items {
                 li {    /* menu-item */
                     position: relative;
                     display: inline-block;
@@ -660,11 +625,21 @@ header.bk-header {
                         }
 
                         .menu-item-image-wrap {
-                            background-size: cover;
-                            background-position: center;
-                            -webkit-background-size: cover;
-                            -moz-background-size: cover;
-                            -o-background-size: cover;
+                           background-size: cover;
+                           background-position: center;
+                           -webkit-background-size: cover;
+                           -moz-background-size: cover;
+                           -o-background-size: cover;
+                           clear:both;
+                           background-repeat: no-repeat;
+                           height: 200px;
+                           background-position: center;
+                           -webkit-border-radius: 5px;
+                           -moz-border-radius: 5px;
+                           border-radius: 5px;
+                           img {
+                               display: none;
+                           }
                         }
 
                         .menu-item-price p {   /* standard-price */
@@ -726,7 +701,6 @@ header.bk-header {
                                     background-repeat: no-repeat;
                                     background-size: 19px;
                                     background-position: center;
-                                    display: block;
                                     font-family:@font-swatch5-font-family;
                                     font-size:@font-swatch5-font-size;
                                     font-weight: @font-swatch5-font-weight;
@@ -928,9 +902,9 @@ footer {
 }
 
 .widget.socialicons span a {
-    background-color: @color-swatch3;
+    background-color: @color-swatch4;
     &:hover {
-        background-color: lighten(@color-swatch3,20%);
+        background-color: lighten(@color-swatch4,15%);
     };
 }
 
@@ -1140,7 +1114,26 @@ footer {
     }
 }
 
+.widget.responsiveslideshow .btn-play:after {
+    font-size:20px;
+}
 
+.widget.responsiveslideshow .slideshow-widget .btn-play {
+    background: rgba(0,0,0,0.5);
+    font-size: 0;
+    text-indent: -99999px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 12;
+    width: 11%;
+    height: 42px;
+    top: 43%;
+    left: 45%;
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-play:after {
+    top:-5px;
+}
 
 /* ===============================
    BUTTON
@@ -1154,7 +1147,7 @@ button.btn {
 
 button.btn:hover {
   cursor: pointer;
-  background-color: lighten(@color-swatch3,95%);
+  background-color: transparent;
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1168,11 +1161,12 @@ button.btn:hover {
 .signupform fieldset button {
     padding:10px 20px;
     border:1px solid @color-swatch3;
+    background-color:transparent;
 }
 
 .signupform fieldset button:hover {
   cursor: pointer;
-  background-color: lighten(@color-swatch3,95%);
+  background-color: transparent;
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1181,6 +1175,8 @@ button.btn:hover {
 
 .signupform fieldset input {
     width:65%;
+    border:1px solid @color-swatch3;
+    background-color:transparent;
 }
 
 /* ===============================
@@ -1194,7 +1190,7 @@ button.btn:hover {
 
 .widget.profile form button:hover {
   cursor: pointer;
-  background-color: lighten(@color-swatch3,95%);
+  background-color: transparent;
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1203,6 +1199,8 @@ button.btn:hover {
 
 .widget.profile form fieldset input {
     width:65%;
+    background-color:transparent;
+    border:1px solid @color-swatch3;
 }
 
 /* ===============================
@@ -1229,6 +1227,8 @@ button.btn:hover {
 
 .blog-search-input {
     width:37%;
+    border:1px solid @color-swatch3;
+    background-color:transparent;
 }
 
 /* ===============================
@@ -1236,13 +1236,14 @@ button.btn:hover {
    =============================== */
 
 .widget.paypalbuynow .widget.button.paypal {
-    background-color:@color-swatch3;
+    background-color:@color-swatch4;
     color:@font-swatch6-color;
+    padding:20px 10px 15px 40px;
 }
 
 .widget.paypalbuynow .widget.button.paypal:hover {
   cursor: pointer;
-  background-color: lighten(@color-swatch3,15%);
+  background-color: lighten(@color-swatch4,15%);
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1254,13 +1255,13 @@ button.btn:hover {
    =============================== */
 
 .widget.tweet a {
-    background-color:@color-swatch3;
+    background-color:@color-swatch4;
     color:@font-swatch6-color;
 }
 
 .widget.tweet a:hover {
   cursor: pointer;
-  background-color: lighten(@color-swatch3,15%);
+  background-color: lighten(@color-swatch4,15%);
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1272,13 +1273,14 @@ button.btn:hover {
    =============================== */
 
 .widget.dropbox button {
-    background-color:@color-swatch3;
+    background-color:@color-swatch4;
     color:@font-swatch6-color;
+    padding:20px 10px 15px 40px;
 }
 
 .widget.dropbox button:hover {
   cursor: pointer;
-  background-color: lighten(@color-swatch3,15%);
+  background-color: lighten(@color-swatch4,15%);
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1388,7 +1390,7 @@ button.btn:hover {
   
 .widget.contactform form fieldset button.btn:hover {
   cursor: pointer;
-  background-color: lighten(@color-swatch3,95%);
+  background-color: transparent;
   -webkit-transition: background-color 0.15s ease-in-out;
   -moz-transition: background-color 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out;
@@ -1465,6 +1467,23 @@ button.btn:hover {
     .widget.contactform form {
         padding-top:0;
     }
+
+    .widget .extendednavigation a.pull:after {
+       content: "";
+       background: image('/images/nav-icon.png') no-repeat; 
+       width: 16px;
+       height: 20px;
+       display: inline-block;
+       position: absolute;
+       right: 0;
+       border-radius:0;
+       box-shadow:none;
+       margin-top:20px; 
+    }
+}
+
+.bk-pt-default .widget .extendednavigation a.pull:after {
+    margin-top:8px;
 }
 
 /* ===============================
@@ -1563,15 +1582,17 @@ button.btn:hover {
     }
 
     .widget.clicktocall a {
-        background-color:@color-swatch3;
+        background-color:@color-swatch4;
         color: @font-swatch6-color;
         font-weight:@font-swatch3-font-weight;
+        padding:20px 10px 15px 40px;
     }
 
     .widget.clicktocall a:hover {
-        background-color:lighten(@color-swatch3,15%);
+        background-color:lighten(@color-swatch4,15%);
         color:@font-swatch6-color;
         font-weight:@font-swatch3-font-weight;
+        padding:20px 10px 15px 40px;
     }
 }
 

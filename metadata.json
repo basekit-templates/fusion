@@ -12,9 +12,9 @@
         "Swatch 1": {
             "color1":"#ffffff",
             "color2":"#f7f4e1",
-            "color3":"#000000",
+            "color3":"#C7C7C7",
             "color4":"#000000",
-            "color5":"#000000",
+            "color5":"#7E7E7E",
             "color6":"#a20404",
             "color7":"#ffffff"
         },
@@ -24,7 +24,7 @@
             "color3":"#841c2f",
             "color4":"#841c2f",
             "color5":"#3c4a55",
-            "color6":"#E77E7E",
+            "color6":"#000000",
             "color7":"#ffffff"
         },
         "Swatch 3": {
@@ -38,11 +38,11 @@
         },
         "Swatch 4": {
             "color1":"#ffffff",
-            "color2":"#f7f4e1",
-            "color3":"#afafaf",
+            "color2":"#a20404",
+            "color3":"#a20404",
             "color4":"#a20404",
-            "color5":"#3c4a55",
-            "color6":"#9bd6cf",
+            "color5":"#7E7E7E",
+            "color6":"#C90000",
             "color7":"#ffffff"
         },
         "Swatch 5": {
@@ -50,7 +50,7 @@
             "color2":"#f7f4e1",
             "color3":"#4BA5A1",
             "color4":"#4BA5A1",
-            "color5":"#3c4a55",
+            "color5":"#7E7E7E",
             "color6":"#9bd6cf",
             "color7":"#ffffff"
         }
@@ -78,7 +78,7 @@
             "font-size": "20px",
             "font-weight": "700",
             "line-height": "28px",
-            "color": "@color-swatch3",
+            "color": "@color-swatch4",
             "letter-spacing": "2px"
         },
         "font4": {
@@ -86,7 +86,7 @@
             "font-size": "18px",
             "font-weight": "400",
             "line-height": "24px",
-            "color": "@color-swatch3",
+            "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
         "font5": {
@@ -102,7 +102,7 @@
             "font-size": "20px",
             "font-weight": "400",
             "line-height": "26px",
-            "color": "@color-swatch1",
+            "color": "@color-swatch7",
             "color-hover": "@color-swatch6",
             "letter-spacing": "3px",
             "background-color": "transparent",
