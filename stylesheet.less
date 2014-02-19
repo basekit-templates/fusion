@@ -120,7 +120,6 @@ h1, h2, h3, h4, h5, p {
                 @media @tablet {
                     width: 100%;
                     padding: 1em 0;
-                    border-bottom: 1px solid @color-swatch3;
                 }
                 &:last-child {
                     @media @tablet {
@@ -283,7 +282,6 @@ h1, h2, h3, h4, h5, p {
             @media @tablet {
             width: 100%;
             padding: 1em 0;
-            border-bottom: 1px solid @color-swatch1; 
         }
             a {
                 color: @font-swatch6-color;
@@ -300,6 +298,10 @@ h1, h2, h3, h4, h5, p {
  .bk-pt-default .extendednavigation {
     border-bottom:0;
     margin-top:0;
+ }
+
+ .bk-pt-default .widget.extendednavigation ul li.folder:after {
+    border-top-color:@color-swatch1;
  }
 
 /* ===============================
@@ -1479,10 +1481,18 @@ button.btn:hover {
        box-shadow:none;
        margin-top:20px; 
     }
-}
 
-.bk-pt-default .widget .extendednavigation a.pull:after {
-    margin-top:8px;
+    .bk-pt-default .widget .extendednavigation a.pull:after {
+        margin-top:18px;
+    }
+
+    .widget .extendednavigation ul li {
+        border-bottom:0;
+    }
+
+    .bk-pt-default .widget.extendednavigation {
+        padding-top: 41px;
+    }
 }
 
 /* ===============================
@@ -1592,6 +1602,10 @@ button.btn:hover {
         color:@font-swatch6-color;
         font-weight:@font-swatch3-font-weight;
         padding:20px 10px 15px 40px;
+    }
+
+    .widget .extendednavigation ul li {
+        border-bottom:0;
     }
 }
 
