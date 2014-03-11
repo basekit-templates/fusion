@@ -80,6 +80,23 @@ h1, h2, h3, h4, h5, p {
     background-color:transparent;
 }
 
+hr.line {
+    height:1px;
+}
+
+.contactform label {
+    display:none;
+}
+
+input, textarea {
+    border:1px solid @color-swatch3;
+}
+
+.message {
+    height:150px;
+    margin-top:20px;
+}
+
  /* ===============================
    EXTENDED NAVIGATION
    =============================== */
@@ -314,6 +331,7 @@ h1, h2, h3, h4, h5, p {
     border-bottom:1px solid @color-swatch3;
     margin:0;
     background-color:@color-swatch3;
+    margin-top:40px;
     ul {
         display: inline-block;
         list-style: none;
@@ -693,13 +711,10 @@ header.bk-header {
                                 margin:0px auto;
                                 display:table;
                                 .dietary-icon {
-                                    background-color: @color-swatch5;
+                                    background-color: @color-swatch4;
                                     width: auto;
                                     height: auto;
                                     border: 0;
-                                    -webkit-border-radius: 5px;
-                                    -moz-border-radius: 5px;
-                                    border-radius: 5px;
                                     background-repeat: no-repeat;
                                     background-size: 19px;
                                     background-position: center;
@@ -1143,7 +1158,7 @@ footer {
 
 button.btn {
     border:1px solid @color-swatch3;
-    padding:20px;
+    padding:15px;
     color: @font-swatch7-color;
 }
 
@@ -1295,71 +1310,6 @@ button.btn:hover {
     width:62%;
 }
 
-/* ===============================
-   CONTACT FORM WIDGET
-   =============================== */
-
-
-.widget.contactform form {
-    display: block;
-    padding-top: 20px;
-    background-color: @color-swatch1;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    text-align:center;
-}
-
-.widget.contactform fieldset {
-    border: none;
-    padding: 0;
-}
-
-.widget.contactform fieldset label {
-    width: 100%;
-    float: left;
-    font-family:@font-swatch4-font-family;
-    font-size:font-swatch4-font-size;
-    font-weight:@font-swatch4-font-weight;
-    line-height:@font-swatch4-line-height;
-    color:@color-swatch3;
-    letter-spacing: @font-swatch4-letter-spacing;
-    display:none;
-}
-
-.widget.contactform form fieldset input {
-    width: 50%;
-    padding: 15px 0px;
-    border:1px solid @color-swatch3;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: lighten(@font-swatch5-color,20%);
-    text-indent: 12px;
-    margin-bottom: 20px;
-    background-color:transparent;
-    margin:0px auto;
-    display:table;
-    margin-bottom:20px;
-}
-
-.widget.contactform form fieldset textarea {
-    width: 50%;
-    border:1px solid @color-swatch3;
-    font-family: @font-swatch5-font-family;
-    font-size: @font-swatch5-font-size;
-    color: @font-swatch5-color;
-    text-indent: 12px;
-    padding-top: 14px;
-    margin-top: 6px;
-    margin-bottom: 20px;
-    resize: none;
-    padding: 10px 0px 100px 0px;
-    background-color:transparent;
-    margin:0px auto;
-    display:table;
-    margin-top:10px;
-}
-
 .widget.contactform fieldset input:focus, .widget.contactform fieldset textarea:focus {
   outline: none;
 }
@@ -1380,7 +1330,7 @@ button.btn:hover {
 }
 
 .widget.contactform form fieldset button.btn {
-  padding: 15px 30px;
+  padding: 15px;
   border:1px solid @color-swatch3;
   font-family: @font-swatch7-font-family;
   font-size: @font-swatch7-font-size;
