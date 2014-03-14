@@ -104,7 +104,6 @@ input, textarea {
 .widget {
     .extendednavigation {
         margin:0px auto;
-        display:table;
         margin-top:20px;
         border-bottom:1px solid #eeeeee;
         @media @tablet {
@@ -1009,7 +1008,16 @@ footer {
         .blog-post-item {
             border-bottom: 1px dotted @color-swatch5;
         }
-
+        .blog-post-feature-image-wrap {  /* Blog post feature image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 250px;
+            margin-bottom: 20px;
+            img {
+                display: none;
+            }
+        }
     }
 }
 
@@ -1330,6 +1338,10 @@ button.btn:hover {
 
 .signupform fieldset input, .widget.profile form fieldset input {
     width:62%;
+    @media @mobile {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 
 .widget.contactform fieldset input:focus, .widget.contactform fieldset textarea:focus {
