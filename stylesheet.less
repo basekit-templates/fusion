@@ -614,7 +614,7 @@ header.bk-header {
             .menu-items {
                 li {    /* menu-item */
                     position: relative;
-                    display: block;
+                    display: inline-block;
                     text-align:center;
                     &.menu-item-promoted { /* menu-item-promoted */
                         padding: 1.2em;
@@ -1438,9 +1438,9 @@ button.btn:hover {
         top:20px;
         right:0;
     }
-        .widget.menusections{
+    .widget.menusections{
         width:100%;
-        margin:0px auto;
+        margin:20px auto;
     }
     .bk-content-text h2:before, .bk-content-text h2:after {
       display:none;
@@ -1501,6 +1501,12 @@ button.btn:hover {
     .wrapper {
         width:90%;
         margin: 0 5%;
+    }
+    .widget.menusections ul li {
+        padding:0;
+    }
+    .widget.menu .main .menu-items li {
+        display:inline-block;
     }
 }
 
