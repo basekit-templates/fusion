@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, p {
 
 .main {
     padding:0;
-    margin-top:40px;
+    padding-top:20px;
 }
 
 .widget.menu .main {
@@ -715,7 +715,6 @@ header.bk-header {
                                 margin:0px auto;
                                 display:table;
                                 .dietary-icon {
-                                    background-color: @color-swatch4;
                                     width: auto;
                                     height: auto;
                                     border: 0;
@@ -729,11 +728,11 @@ header.bk-header {
                                     color:@font-swatch5-color;
                                     letter-spacing: @font-swatch5-letter-spacing;
                                     z-index: 9999999;
-                                    color: @color-swatch1;
                                     margin-right: 5px;
                                     margin-bottom: 5px;
                                     float: left;
                                     padding:5px;
+                                    border:2px solid @color-swatch3;
                                 }
 
                             } /* end menu-section-item-dietary-props */
@@ -837,6 +836,10 @@ header.bk-header {
     background-color: rgba(1, 1, 1, 0.05);
     border: 3px solid @color-swatch3;
     padding:10px;
+}
+
+.widget.menu .main .menu-subsection .menu-subsection-promoted .menu-subsection-header, .widget.menu .main .menu-items li .inner-item {
+    border-bottom:0;
 }
 
 /* ===============================
