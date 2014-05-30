@@ -557,13 +557,13 @@ header.bk-header {
             /* MENU-HEADER AND SUB-SECTION HEADER */
 
             .menu-header, .menu-subsection-header {
+                overflow: hidden; 
                 padding: 0 0 1.2em;
                     @media @tablet {
                         padding: 1.25em 0 0.75em;
                     }
                     h1, h2, {    /* menu-name menu-section-name */
                 text-align: center;
-                overflow: hidden; 
                     &:before, &:after {
                         border-top: 2px solid @color-swatch3;
                         content: "";
